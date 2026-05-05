@@ -1,20 +1,9 @@
 import { useState } from 'react'
-import './App.css'
 import Fruit from './Fruit'
 
 function App() {
   const [fruits, setFruits] = useState([
-    'Plátano',
-    'Uva', 
-    'Manzana',
-    'Pera',
-    'Guayaba',
-    'Kiwi',
-    'Pepino',
-    'Durazno',
-    'Papaya',
-    'Sandía',
-    'Naranja',
+    'Platano', 'Mandarina', 'Naranja', 'Pera', 'Manzana', 'Durazno', 'Uva', 'Piña', 'Sandía', 'Mango',
   ]);
 
   return (
