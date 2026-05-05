@@ -3,8 +3,23 @@ import Fruit from './Fruit'
 
 function App() {
   const [fruits, setFruits] = useState([
-    'Platano', 'Mandarina', 'Naranja', 'Pera', 'Manzana', 'Durazno', 'Uva', 'Piña', 'Sandía', 'Mango',
+    'Manzana',
+    'Pera',
+    'Platano',
+    'Sandía',
+    'Mango',
+    'Durazno',
+    'Naranja',
+    'Kiwi',
+    'Uva',
   ]);
+
+  const addFruit = () => {
+    const newFruit = prompt('Escribe una fruta:');
+    if (newFruit && newFruit.trim() !== '') {
+      setFruits([...fruits, newFruit.trim()]);
+    }
+  };
 
   return (
     <div>
@@ -12,6 +27,7 @@ function App() {
       {fruits.map((fruit, index) => (
         <Fruit key={index} name={fruit} />
       ))}
+      <button onClick={addFruit}>Agregar Fruta</button>
     </div>
   )
 }
